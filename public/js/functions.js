@@ -68,3 +68,40 @@ function isEmail(email) {
     // Converting the email to lowercase
     return regexp.test(String(email).toLowerCase());
 }
+
+
+
+
+//CARACTERES SPECIAUX / KEBAB CASE
+function kebab_case(para_str) {
+    para_str = para_str.toLowerCase();
+    para_str = para_str.replace(/[áâàåãä]/gi, 'a');
+    para_str = para_str.replace(/[æ]/gi, 'ae');
+    para_str = para_str.replace(/[éêèë]/gi, 'e');
+    para_str = para_str.replace(/[íîìï]/gi, 'i');
+    para_str = para_str.replace(/[óôòøõö]/gi, 'o');
+    para_str = para_str.replace(/[œ]/gi, 'oe');
+    para_str = para_str.replace(/[ùûüúûùü]/gi, 'u');
+    para_str = para_str.replace(/[ýÿ]/gi, 'y');
+    para_str = para_str.replace(/[ç¢]/gi, 'c');
+    para_str = para_str.replace(/[Ð]/gi, 'd');
+    para_str = para_str.replace(/[ƒ]/gi, 'f');
+    para_str = para_str.replace(/[ñ]/gi, 'n');
+    para_str = para_str.replace(/[š]/gi, 's');
+    para_str = para_str.replace(/[ß]/gi, 'ss');
+    para_str = para_str.replace(/[\^\\\|\.\{\}\[\]\(\)\?\#\!\+\*]/gi, ''); //caracteres echapees en regex sauf dollar
+    para_str = para_str.replace(/[²&~"`°=¨£¤%µ,;:§]/gi, ''); //autres caracteres speciaux
+    para_str = para_str.replace(/[\$]/gi, '');
+    para_str = para_str.replace(/[€]/gi, 'e');
+    para_str = para_str.replace(/[@]/gi, 'at');
+    para_str = para_str.replace(/  /gi, ' '); //plusieurs espaces
+
+    //remplaces par tirets
+    para_str = para_str.replace(/[ _/']/gi, '-'); //espace
+
+    //enlever les - au debut et a la fin
+    para_str = para_str.replace(/[-]/gi, ' ');
+    para_str = para_str.trim();
+    para_str = para_str.replace(/[ ]/gi, '-'); //espace
+    return para_str;
+}

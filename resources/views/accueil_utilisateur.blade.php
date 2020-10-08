@@ -46,4 +46,5 @@
 <script src={{asset("js/api/Cellier.js")}}></script>
 <script src={{asset("js/api/CellierBouteille.js")}}></script>
 <script src={{asset("js/api/bouteilleDuCellierUtilisateur.js")}}></script>
+<script src={{asset("js/functions.js")}}></script>
 </html>
