@@ -45,18 +45,18 @@ $id_transaction = intval($_GET['bouteille']);
         <form class="form-ajouter" name="form1" action="/" method="post">  
           <label for="quantite">Modifier Quantité:</label>
           <span><p class="fail" id="e.quantite" ></p></span>
-          <input class="input-ajouter" type="text" id="quantite" name="quantite">
+          <input class="input-ajouter" type="text" id="quantite" name="quantite"><br><br>
           
           <label for="prix">Modifier Prix:</label>
           <span><p class="fail" id="e.prix" ></p></span>
-          <input class="input-ajouter" type="text" id="prix" name="prix" >
+          <input class="input-ajouter" type="text" id="prix" name="prix"><br><br>
 
           <label for="millesime">Modifier Millesime:</label>
           <span><p class="fail" id="e.millesime" ></p></span>
-          <input class="input-ajouter" type="text" id="millesime" name="millesime" >
+          <input class="input-ajouter" type="text" id="millesime" name="millesime"><br><br>
 
-          <input type="hidden" class="input-ajouter"  id="cellierId" name="cellierId" >
-          <input type="hidden" class="input-ajouter"  id="bouteilleId" name="bouteilleId" >
+          <input type="hidden" class="input-ajouter"  id="cellierId" name="cellierId">
+          <input type="hidden" class="input-ajouter"  id="bouteilleId" name="bouteilleId">
         </form>
           <button class="btn btn-ajouter-bouteille" type="button"  id="modifierBtn" type="submit" >Modifier</button>
           <span><p class="fail" id="b.modification" ></p></span>

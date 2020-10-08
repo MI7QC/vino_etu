@@ -76,13 +76,16 @@ p {
     margin-left: -130px;
 
 }
-.container_bouteille>table{
+
+.container_bouteille>table {
     font-weight: bold;
 }
-.grosseur_img{
-    width:150px;
+
+.grosseur_img {
+    width: 150px;
     height: 225px;
 }
+
 .img_bouteille {
     margin-bottom: 20px;
 }
@@ -178,7 +181,7 @@ p {
     margin-top: 10px;
     margin-bottom: 40px;
     font-size: 18px;
-    
+
 
 }
 
@@ -839,40 +842,40 @@ label {
     }
 
     /*Mon compte*/
-.form-compte {
-    padding: 20px 0;
-    line-height: 1.1;
-    margin-left: 220px;
-}
+    .form-compte {
+        padding: 20px 0;
+        line-height: 1.1;
+        margin-left: 220px;
+    }
 
-.btn-modifier-compte {
-    display: block;
-    width: 25%;
-    background-color: #028340;
-    margin-top: -20px;
-    margin-left: 220px;
-}
+    .btn-modifier-compte {
+        display: block;
+        width: 25%;
+        background-color: #028340;
+        margin-top: -20px;
+        margin-left: 220px;
+    }
 
-.btn-supprimer-compte {
-    display: block;
-    width: 25%;
-    background-color: #dd0303;
-    margin-top: -20px;
-    margin-left: 220px;
-}
+    .btn-supprimer-compte {
+        display: block;
+        width: 25%;
+        background-color: #dd0303;
+        margin-top: -20px;
+        margin-left: 220px;
+    }
 
-.titre-compte {
-    font-size: 30px;
-    font-weight: 600;
-    margin-top: -90px;
-    color: #ffffff;
-    margin-left: 220px;
-}
+    .titre-compte {
+        font-size: 30px;
+        font-weight: 600;
+        margin-top: -90px;
+        color: #ffffff;
+        margin-left: 220px;
+    }
 
-.utilisateur {
-    padding-left: 220px;
+    .utilisateur {
+        padding-left: 220px;
 
-}
+    }
 
 
 }
@@ -951,41 +954,41 @@ label {
         font-size: 1em;
     }
 
-     /*Mon compte*/
-.form-compte {
-    padding: 20px 0;
-    line-height: 1.1;
-    margin-left: 120px;
-}
+    /*Mon compte*/
+    .form-compte {
+        padding: 20px 0;
+        line-height: 1.1;
+        margin-left: 120px;
+    }
 
-.btn-modifier-compte {
-    display: block;
-    width: 34%;
-    background-color: #028340;
-    margin-top: -20px;
-    margin-left: 120px;
-}
+    .btn-modifier-compte {
+        display: block;
+        width: 34%;
+        background-color: #028340;
+        margin-top: -20px;
+        margin-left: 120px;
+    }
 
-.btn-supprimer-compte {
-    display: block;
-    width: 34%;
-    background-color: #dd0303;
-    margin-top: -20px;
-    margin-left: 120px;
-}
+    .btn-supprimer-compte {
+        display: block;
+        width: 34%;
+        background-color: #dd0303;
+        margin-top: -20px;
+        margin-left: 120px;
+    }
 
-.titre-compte {
-    font-size: 30px;
-    font-weight: 600;
-    margin-top: -90px;
-    color: #ffffff;
-    margin-left: 120px;
-}
+    .titre-compte {
+        font-size: 30px;
+        font-weight: 600;
+        margin-top: -90px;
+        color: #ffffff;
+        margin-left: 120px;
+    }
 
-.utilisateur {
-    padding-left: 120px;
+    .utilisateur {
+        padding-left: 120px;
 
-}
+    }
 
 }
 
@@ -999,9 +1002,11 @@ label {
     .slogan {
         display: none;
     }
+
     .ajouter {
         font-size: 20px;
     }
+
     .accueille {
         font-size: 11px;
         justify-content: space-between;
