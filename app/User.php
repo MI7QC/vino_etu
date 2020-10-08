@@ -62,6 +62,12 @@ class User extends Authenticatable
         $this->roles()->sync($role);
     }
 
+    public function getRoles()
+    {
+        return $this->roles
+            ->pluck('name')->unique();
+    }
+
     /**
      * Fetch the user's abilities.
      *

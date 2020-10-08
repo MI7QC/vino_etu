@@ -105,3 +105,12 @@ function kebab_case(para_str) {
     para_str = para_str.replace(/[ ]/gi, '-'); //espace
     return para_str;
 }
+
+function isURL(URL) {
+    // Regular Expression (Not accepts second @ symbol
+    // before the @gmail.com and accepts everything else)
+    let regexp = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/;
+
+    // Converting the email to lowercase
+    return regexp.test(String(URL).toLowerCase());
+}

@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap&subset=cyrillic"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href={{ asset("css/style.css") }}> 
-    <script src={{asset("js/api/Transaction.js")}}></script>  
+    <link rel="stylesheet" href={{ asset("css/style.css") }}>
+    <script src={{asset("js/api/Transaction.js")}}></script>
     <script src={{asset("js/api/User.js")}}></script>
     <script src={{asset("js/modal.js")}}></script>
     <title></title>
@@ -24,17 +24,22 @@
     <div class="main-content">
         <div class="content-wrap">
             <a href="#" class="logo_accueille"><img src={{ asset("img/logo_vino.png") }} alt="vino"></a>
+            @if(auth()->user()->getRoles()[0] === 'administrateur')
+                <h3 class="text-align-center"><a href="{{ route("admin") }}">Administration</a></h3>
+            @endif
             <h2 class="slogan">Un petite verre de vino?</h2>
         </div>
-        <aside  id="accueille">
+        <aside id="accueille">
             <nav class="header-nav accueille">
                 <a class="header-nav-link active accueille" href="{{ route("mon_compte") }}">Mon compte</a>
-                <a class="header-nav-link active accueille" href="{{ route("ajouter_bouteille") }}">Ajouter une bouteille au
+                <a class="header-nav-link active accueille" href="{{ route("ajouter_bouteille") }}">Ajouter une
+                    bouteille au
                     cellier</a>
-                <a class="header-nav-link" href="{{route("logout")}}"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+                <a class="header-nav-link" href="{{route("logout")}}"><i class="fa fa-sign-out fa-2x"
+                                                                         aria-hidden="true"></i></a>
             </nav>
 
-           <div class="message-bienvenu"><h2>Votre cellier</h2></div>
+            <div class="message-bienvenu"><h2>Votre cellier</h2></div>
 
         </aside>
     </div>

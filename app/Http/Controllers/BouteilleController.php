@@ -48,14 +48,14 @@ class BouteilleController extends Controller
     {
         $validator = Validator::make($request->all(), [
             "nom" => "string|required",
-            "code_saq" => "string",
+            "code_saq" => "string|required|unique:bouteilles",
             "pays" => "string|required",
             "description" => "string",
             "prix_saq" => "numeric",
             "url_image" => "url",
             "url_saq" => "url",
             "format" => "string|required",
-            "type_id" => "integer",
+            "type_id" => "integer|required",
         ]);
 
         if ($validator->passes()) {
