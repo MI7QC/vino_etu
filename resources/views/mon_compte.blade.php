@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
+@extends("layouts.app")
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap&subset=cyrillic"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  
+@section("header")
   <script src="{{ asset('js/api/User.js') }}"></script>
   <script src="{{ asset('js/api/Cellier.js') }}"></script>
-  <title></title>
-</head>
+  <script src="{{ asset('js/composantes/ModifierMonCompte.js') }}"></script>
+  <title>Mon compte - Vino</title>
+@endsection
 
-</head>
-
-<body>
+@section("content")
   <div class="container-ajouter">
     <div class="main-content-ajouter">
       <div class="content-wrap-ajouter">
@@ -27,7 +18,7 @@
       </div>
       <aside class="section_deux">
         <nav class="header-nav compte">
-          <a class="header-nav-link active " href="{{ route("accueil_utilisateur") }}">Mon cellier</a>
+          <a class="header-nav-link active " href="{{ route("accueil") }}">Mon cellier</a>
           <a class="header-nav-link active " href="{{ route("ajouter_bouteille") }}">Ajouter une bouteille au cellier</a>
         </nav>
         <h2 class="titre-compte">Mon compte</h2>
@@ -37,10 +28,9 @@
         <label for="name" class="utilisateur">Utilisateur: {{ Auth::user()->name }} </label><br><br>
 
         <form class="form-compte" name="userF" action="/" method="post">
-          
           <label for="email">Modifier Courriel:</label>
           <span><p class="fail" id="e.email"></p></span>
-          <input class="input-ajouter" type="text" id="email" name="email">
+          <input class="input-ajouter" type="text" id="email" name="email" >
           <input type="hidden" class="input-ajouter" type="text" id="emailHidden" name="emailHidden"><br><br>
           
           <label for="mdp">Modifier Mot de Passe:</label>
@@ -81,8 +71,5 @@
       </aside>
     </div>
   </div>
-  <footer class="footer-ajouter">2020 Vino | Group 1</footer>
-  <script src="{{ asset('js/composantes/ModifierMonCompte.js') }}"></script>
-<script defer>importeModifierMonCompte()</script>
-</body>
-</html>
+  <script defer>importeModifierMonCompte()</script>
+@endsection

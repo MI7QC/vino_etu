@@ -31,6 +31,7 @@ class SAQ {
         })
             .then(response => response.json())
             .then(json => {
+                console.log(json)
                 if (json == "Déjà en inventaire") {
                     return false;
                 }
@@ -44,6 +45,7 @@ class SAQ {
      * @param type
      * @param page
      */
+    // TODO: Optimiser le nombre de requêtes (ne plus passer pas this.index)
     async storeAll(type, page) {
         let nbr_ajout = 0;
         let index = this.index(type, page).then(async data => {

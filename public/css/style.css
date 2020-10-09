@@ -712,6 +712,7 @@ label {
 
 #search {
     width: 222px;
+    text-align: inherit;
 }
 
 /*Mon compte
@@ -1296,7 +1297,6 @@ label[for=toggle]:hover {
 
     .fa-sign-out {
         color: white;
-
     }
 }
 
@@ -1373,6 +1373,10 @@ users.blade.php/
 
 .color-white {
     color: white;
+}
+
+.color-black {
+    color: black;
 }
 
 .display-flex {

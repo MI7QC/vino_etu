@@ -101,7 +101,7 @@ class UserController extends Controller
         ]);
 
         if ($validator->passes()) {
-            $user->assignRole(request("role"));
+            $user->roles()->sync(request("role"));
             if ($request->password)
                 $request["password"] = Hash::make($request->password);
 

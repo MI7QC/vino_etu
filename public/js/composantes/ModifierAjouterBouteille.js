@@ -61,9 +61,6 @@ function importeModifierAjouterBouteille() {
         var cellier = document.getElementById("cellier").value;
         var notes = document.getElementById("notes").value;
         var price = document.getElementById("price").value;
-        // Afficher la valeur
-        // alert(bouteilleId + millesime + quantite + price + date + garde +  cellier + notes);
-
 
         // validation du formulaire
         var f = document.form1;

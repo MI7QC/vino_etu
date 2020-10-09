@@ -1,5 +1,5 @@
 /**
- * Class Modal qui permet de créer et créer des modales.
+ * Class Modal qui permet de créer et gérer des modales.
  */
 class Modal {
     constructor() {
@@ -49,7 +49,8 @@ class Modal {
     }
 
     /**
-     * Réinitialisation du contenu du modal
+     * Réinitialisation du contenu du modal.
+     * À utiliser quand plusieurs écrans doivent se succéder dans un modal.
      */
     static resetModal() {
         document.querySelector(".modal-content").innerHTML = "<span class='close-button'>&times;</span>";

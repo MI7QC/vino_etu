@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<html lang="fr">
+@extends("layouts.app")
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap&subset=cyrillic"
-          rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href={{ asset("css/style.css") }}>
+@section("header")
     <script src={{ asset("js/api/Bouteille.js") }}></script>
     <script src="{{ asset("js/functions.js") }}"></script>
     <script src="{{ asset("js/modal.js") }}"></script>
     <script src="{{ asset("js/composantes/ListeCatalogue.js") }}"></script>
-    <title>Vino - Liste des bouteilles du catalogue</title>
-</head>
 
-<body>
+    <style>
+        footer {
+            color: white;
+            background-color: #000000;
+        }
+    </style>
+
+    <title>Vino - Liste des bouteilles du catalogue</title>
+@endsection
+
+@section("content")
 <div class="page_admin">
-    <div class="logo_admin"><a href="{{ route("accueil") }}"><img src={{ asset("img/logo_vino.png") }} alt="vino"></a></div>
+    <div class="logo_admin"><a href="{{ route("accueil") }}"><img src={{ asset("img/logo_vino.png") }} alt="vino"></a>
+    </div>
     <h2 class="color-white text-align-center">Bonjour {{ Auth::user()->name }}</h2>
     <nav class="nav" class="wrap">
         <input type="checkbox" name="toggle" id="toggle"/>
@@ -61,12 +63,8 @@
         </tr>
         </thead>
         <tbody>
-            <script defer>ListeBouteilles()</script>
+        <script defer>ListeBouteilles()</script>
         </tbody>
     </table>
-
 </div>
-
-</body>
-
-</html>
+@endsection

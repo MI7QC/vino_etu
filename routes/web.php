@@ -15,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-//Route::get('/', function () {
-//    return view('accueil_utilisateur');
-//})->middleware('auth')->name('home');
-
 Route::get('/', function () {
     return view('accueil_utilisateur');
 })->middleware('auth')->name("accueil");
@@ -34,10 +30,6 @@ Route::get('/modifier_bouteille', function () {
 Route::get('/mon_compte', function () {
     return view('mon_compte');
 })->name('mon_compte');
-
-Route::get('/accueil_utilisateur', function () {
-    return view('accueil_utilisateur');
-})->name('accueil_utilisateur');
 
 // Routes Admin
 //Users
