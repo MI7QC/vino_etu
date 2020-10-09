@@ -32,9 +32,10 @@
       <aside class="section_deux">
         <nav class="header-nav ajouter">
           <a class="header-nav-link active ajouter" href="{{ route("accueil_utilisateur") }}">Mon cellier</a>
+          <a class="header-nav-link active ajouter" href="{{ route("ajouter_bouteille") }}">Ajouter une bouteille au cellier</a>
         </nav>
         <h3 class="slogan-ajouter">Ajouter une bouteille?</h3>
-        <button onclick="getValue()" class="btn btn-ajouter-bouteille2" type="submit" formaction="#">Ajouter la bouteille</button>
+        <button  class="btn btn-ajouter-bouteille2" id="btnA" type="submit" formaction="#">Ajouter la bouteille</button>
         
 
 
@@ -92,7 +93,7 @@
           <img src="img/bouteille3.png" alt="bouteille">
         </div>
         <span><p class="fail" id="b.ajouter" style="margin-top: 20px"></p></span>
-        <button class="btn btn-ajouter-bouteille" type="button"   id="btnAjouter" type="submit" formaction="#">Ajouter la bouteille </button>
+        <button  class="btn btn-ajouter-bouteille" class="btnA" type="button"   id="btnAjouter" type="submit" formaction="#">Ajouter la bouteille </button>
         
       </aside>
     </div>

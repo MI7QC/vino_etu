@@ -14,10 +14,6 @@ class Modal {
             </div>
         `;
 
-        // console.log(modalElement);
-
-        // console.log(document.querySelector(".page_admin"))
-
         document.querySelector("body").appendChild(modalElement);
     }
 

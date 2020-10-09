@@ -83,7 +83,6 @@ function ListeUtilisateurs() {
                         password: document.getElementById("password").value,
                         confirmation: document.getElementById("confirmation").value
                     }
-                    console.log(user);
                     modifierUtilisateur(user);
                 })
             })
@@ -128,13 +127,9 @@ function ListeUtilisateurs() {
                     password: document.getElementById("password").value,
                     confirmation: document.getElementById("confirmation").value
                 }
-                console.log(user);
                 ajouterUtilisateur(user);
             })
         })
-
-        console.log(data)
-
     })
 }
 
@@ -151,12 +146,8 @@ function ajouterUtilisateur(user) {
     }
 
     if (erreurs.length === 0) {
-        console.log("Enregistrement !")
-
         users.store(user).then(() => {
             Modal.closeModal();
-
-            // TODO = Optimiser le rafraichissement
             ListeUtilisateurs();
         })
     }
@@ -175,22 +166,12 @@ function modifierUtilisateur(user) {
     }
 
     if (erreurs.length === 0) {
-        console.log("Modification !")
-
         users.update(user.id, {
             name: user.name,
             email: user.email,
             role: user.role
         }).then(() => {
-            // if (user.password.length > 0) {
-            //     users.update(user.id, {
-            //         password: user.password
-            //     })
-            // }
-
             Modal.closeModal();
-
-            // TODO = Optimiser le rafraichissement
             ListeUtilisateurs();
         })
     }

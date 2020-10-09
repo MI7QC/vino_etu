@@ -41,8 +41,7 @@ class Bouteille {
                 }
             })
             .then(response => response.json())
-            .then(json => console.log(json))
-            .catch(err => console.log(err));
+            .catch(err => err);
     }
 
     /**
@@ -60,8 +59,7 @@ class Bouteille {
                 }
             })
             .then(response => response.json())
-            .then(json => console.log(json))
-            .catch(err => console.log(err));
+            .catch(err => err);
     }
 
     /**
@@ -76,6 +74,6 @@ class Bouteille {
                     "Content-type": "application/json; charset=UTF-8"
                 }
             })
-            .catch(err => console.log(err));
+            .catch(err => err);
     }
 }

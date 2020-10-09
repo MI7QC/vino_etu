@@ -5,11 +5,6 @@ function ListeSAQ() {
     let recherche_type = document.getElementById("type");
     let recherche_page = document.getElementById("page");
 
-// TODO : Données de recherche persistantes
-// recherche_page.value = recherche.page;
-
-// console.log(recherche_type)
-
     saq = new SAQ();
     saq.index(recherche.type, recherche.page).then(data => {
         let tableau = document.querySelector(".info tbody")
@@ -37,7 +32,6 @@ function ListeSAQ() {
 
             document.getElementById(b.code_saq).addEventListener("click", (evt) => {
                 saq.store(b).then((json) => {
-                    console.log(json)
                     if (json) {
                         let pMessage = document.getElementById(`message_${evt.target.id}`);
                         pMessage.innerHTML = "Ajout bien effectué !";
@@ -54,7 +48,6 @@ function ListeSAQ() {
         document.getElementById("ajouter_bouteilles_saq").addEventListener("click", (evt) => {
             saq.storeAll(recherche.type, recherche.page)
                 .then(data => {
-                    console.log(data);
                     document.getElementById("ajouter_bouteilles_saq").disabled = true;
                     document.getElementById("ajouter_bouteilles_saq").style.cursor = "not-allowed"
                 });

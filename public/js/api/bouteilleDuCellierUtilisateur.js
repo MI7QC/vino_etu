@@ -4,7 +4,6 @@
     let idUtilisateur = document.getElementById("idUtilisateur").value;
     let userApi = new User;
     userApi.showCellier(idUtilisateur).then((data => {
-        console.log(data);
         if (data.length === 0) {
             creeCellier();
             location.reload();
@@ -28,9 +27,7 @@
     function bouteilles(evt) {
 
         let idCellier = evt;
-        console.log(idCellier);
         let accueille = document.getElementById("accueille")
-        console.log(accueille);
         let containerBouteille = document.createElement("div");
         containerBouteille.setAttribute("class", "container_bouteille")
         let eTable = document.createElement("table");
@@ -40,9 +37,7 @@
             return res.json();
         });
         reponseJson.then(function (reponse) {
-            console.log("je suis dans le fetch de bouteille", reponse);
             for (let i = 0; i < reponse.length; i++) {
-                //console.log(reponse[i])
 
                 let eTr1 = document.createElement("tr");
                 eTr1.setAttribute("id", "trBouteille" + reponse[i].bouteille_id);
@@ -89,14 +84,11 @@
                 eBoutonModifier.setAttribute("class", "btn btn-modifier inline");
                 eBoutonModifier.setAttribute("btn", "modifier_" + reponse.code_saq);
                 eBoutonModifier.addEventListener("click", function () {
-                    console.log("transaction " + reponse[i].transaction_id + " millisime " + reponse[i].millesime);
                     var idTransaction = reponse[i].transaction_id;
                     document.location.href = `/modifier_bouteille?bouteille=` + idTransaction + '-' + kebab_case(reponse[i].nom);
                     let t = new Transaction();
                     t.show(idTransaction).then(dataU => {
-                        console.log({
-                            dataU
-                        });
+                       {dataU};
                     });
                 })
                 eTextModifier = document.createTextNode("Modifier")
@@ -106,7 +98,6 @@
                 eBoutonAjouter.setAttribute("btn", "ajouter_" + reponse.code_saq);
                 eBoutonAjouter.addEventListener("click", function () {
                     quantite = document.getElementById("quantite" + reponse[i].quantite);
-                    console.log(quantite.innerHTML);
                     quantite = quantite.innerHTML.replace("Quantite: ", "");
                     quantite++;
                     document.getElementById("quantite" + reponse[i].quantite).innerHTML = "Quantite: " + quantite;
@@ -116,9 +107,8 @@
                         bouteille_id: reponse[i].bouteille_id
                     };
                     let transac = new Transaction;
-                    console.log(reponse[i].bouteille_id);
                     transac.update(reponse[i].transaction_id, transactionInfo, ).then(data => {
-                        console.log(data);
+                       data;
                     });
                 })
                 eTextAjouter = document.createTextNode("Ajouter")
@@ -137,14 +127,11 @@
                         bouteille_id: reponse[i].bouteille_id
                     };
                     let transac = new Transaction;
-                    console.log(reponse[i].bouteille_id);
                     transac.update(reponse[i].transaction_id, transactionInfo, ).then(data => {
                         data;
                     });
 
-                    console.log(eTr1);
                     if (quantite == 0) {
-                        console.log(reponse[i].transaction_id);
                         transac.destroy(reponse[i].transaction_id);
                         eTr1 = document.getElementById("trBouteille" + reponse[i].bouteille_id);
                         eTr1.innerHTML = "";

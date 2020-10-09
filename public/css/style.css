@@ -486,7 +486,6 @@ td.actions {
 
 .footer {
     width: 100%;
-
     position: absolute;
     bottom: 45px;
     left: 0;
@@ -579,6 +578,8 @@ footer {
     padding: 20px 40px;
     background: #ffffff;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 
 .admin {
@@ -627,6 +628,8 @@ footer {
     padding: 20px 40px;
     background: #ffffff;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 
 .img_b {
@@ -674,7 +677,7 @@ footer {
     font-size: 30px;
     font-weight: 600;
     margin-left: 22px;
-    margin-top: -180px;
+    margin-top: auto;
     margin-bottom: 20px;
     color: #ffffff;
 }
@@ -720,15 +723,19 @@ label {
 
 .btn-modifier-compte {
     display: block;
-    width: 44%;
+    width: 246px;
     background-color: #028340;
     margin-top: -20px;
 
 }
 
+.header-nav a {
+    margin-bottom: 25px;
+}
+
 .btn-supprimer-compte {
     display: block;
-    width: 44%;
+    width: 246px;
     background-color: #dd0303;
     margin-top: -20px;
 }
@@ -760,7 +767,7 @@ label {
 .titre-compte {
     font-size: 30px;
     font-weight: 600;
-    margin-top: -180px;
+    margin-top: auto;
     color: #ffffff;
 }
 
@@ -820,6 +827,16 @@ label {
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
+
+.fa {
+    color: black
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
 /* Media
 =================*/
 
@@ -850,7 +867,7 @@ label {
 
     .btn-modifier-compte {
         display: block;
-        width: 25%;
+        width: 246px;
         background-color: #028340;
         margin-top: -20px;
         margin-left: 220px;
@@ -858,7 +875,7 @@ label {
 
     .btn-supprimer-compte {
         display: block;
-        width: 25%;
+        width: 246px;
         background-color: #dd0303;
         margin-top: -20px;
         margin-left: 220px;
@@ -867,7 +884,7 @@ label {
     .titre-compte {
         font-size: 30px;
         font-weight: 600;
-        margin-top: -90px;
+        margin-top: auto;
         color: #ffffff;
         margin-left: 220px;
     }
@@ -876,6 +893,7 @@ label {
         padding-left: 220px;
 
     }
+
 
 
 }
@@ -913,6 +931,8 @@ label {
     .fa-sign-out {
         margin-top: 0px;
     }
+
+
 
     .logo_accueille img {
         margin-left: 40px;
@@ -963,7 +983,7 @@ label {
 
     .btn-modifier-compte {
         display: block;
-        width: 34%;
+        width: 246px;
         background-color: #028340;
         margin-top: -20px;
         margin-left: 120px;
@@ -971,7 +991,7 @@ label {
 
     .btn-supprimer-compte {
         display: block;
-        width: 34%;
+        width: 246px;
         background-color: #dd0303;
         margin-top: -20px;
         margin-left: 120px;
@@ -980,7 +1000,7 @@ label {
     .titre-compte {
         font-size: 30px;
         font-weight: 600;
-        margin-top: -90px;
+        margin-top: auto;
         color: #ffffff;
         margin-left: 120px;
     }
@@ -1061,7 +1081,7 @@ label {
 
     .btn-modifier-compte {
         display: block;
-        width: 46%;
+        width: 246px;
         background-color: #028340;
         margin-top: -20px;
         margin-left: 120px;
@@ -1069,7 +1089,7 @@ label {
 
     .btn-supprimer-compte {
         display: block;
-        width: 46%;
+        width: 246px;
         background-color: #dd0303;
         margin-top: -20px;
         margin-left: 120px;
@@ -1078,7 +1098,7 @@ label {
     .titre-compte {
         font-size: 30px;
         font-weight: 600;
-        margin-top: -90px;
+        margin-top: auto;
         color: #ffffff;
         margin-left: 120px;
     }

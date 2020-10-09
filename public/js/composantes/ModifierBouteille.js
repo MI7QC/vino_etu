@@ -1,9 +1,6 @@
 function importeModifierBouteille() {
 
     let id_transaction = document.getElementsByTagName("h2")[0].getAttribute("data-id");
-    console.log({
-        id_transaction
-    })
 
     //Class Transaction
     let transact = new Transaction;
@@ -23,15 +20,9 @@ function importeModifierBouteille() {
         bouteilles.show(b).then(dataB => {
 
             bouteilleNom = dataB.nom
-            console.log({
-                bouteilleNom
-            });
             //remplace le titre H2 par le nom de la bouteille.
             var h2 = document.getElementsByTagName("h2")[0]
             h2.innerHTML = "Bouteille : " + bouteilleNom;
-            console.log({
-                h2
-            })
         });
     });
 
@@ -40,7 +31,6 @@ function importeModifierBouteille() {
 
     document.getElementById("modifierBtn").addEventListener("click", function () {
 
-        console.log("je clique tbk");
         //Insertion des valeurs récupéré des champ input du serveur
         var quantite = document.getElementById("quantite").value;
         var prix = document.getElementById("prix").value;
@@ -48,29 +38,8 @@ function importeModifierBouteille() {
         var cellierId = document.getElementById("cellierId").value;
         var bouteilleId = document.getElementById("bouteilleId").value;
 
-        console.log({
-            quantite
-        });
-        console.log({
-            prix
-        });
-        console.log({
-            millesime
-        });
-        console.log({
-            cellierId
-        });
-        console.log({
-            bouteilleId
-        });
-
-
-
-
         // validation du formulaire
         var f = document.form1;
-        var msgEr;
-
 
         //Quantité
         var msgErrQ = "";
@@ -139,7 +108,6 @@ function importeModifierBouteille() {
 
 
             transact.update(id_transaction, transactionInfo).then(data => {
-                console.log(data);
 
                 //// ajouter success
                 document.getElementById("b.modification").innerHTML = "Modification effectué";
@@ -148,8 +116,6 @@ function importeModifierBouteille() {
                     location.reload();
                     window.location.href = "/"
                 }, 900);
-
-
             })
         }
     })

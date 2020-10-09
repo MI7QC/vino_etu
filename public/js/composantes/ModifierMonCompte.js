@@ -3,29 +3,17 @@ function importeModifierMonCompte() {
 
     let user = new User();
     user.show(userId).then(dataU => {
-        console.log({
-            dataU
-        });
 
         var eemail;
         eemail = dataU.email
-        console.log({
-            eemail
-        });
         document.getElementById('email').value = eemail;
         document.getElementById('emailHidden').value = eemail;
     });
 
     let cell = new Cellier;
     cell.show(userId).then(dataC => {
-        console.log({
-            dataC
-        });
         var cellier;
         cellier = dataC.nom
-        console.log({
-            cellier
-        });
         document.getElementById('cellier').value = cellier;
     });
 
@@ -139,9 +127,6 @@ function importeModifierMonCompte() {
         if (inputEmail == eemailHidden) {
             //supression utilisateur userId
             user.destroy(userId).then(data => {
-                console.log({
-                    data
-                });
             })
             //supression cellier de l'utilisateur
             cell.destroy(userId).then(data => {
