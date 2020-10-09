@@ -6,7 +6,8 @@
     <script src="{{ asset('js/api/Transaction.js') }}"></script>
     <script src="{{ asset('js/api/User.js') }}"></script>
     <script src="{{ asset('js/composantes/ModifierAjouterBouteille.js') }}"></script>
-    
+    <link rel="stylesheet" href="https://unpkg.com/@trevoreyre/autocomplete-js/dist/style.css"/>
+
     <title>Ajouter une bouteille - Vino</title>
 @endsection
 
